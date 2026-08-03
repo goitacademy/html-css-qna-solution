@@ -1,0 +1,139 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0d041c;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 14px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.section {
+  padding: 96px 0;
+}
+
+.container {
+  max-width: 1231px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.item img {
+  margin: 0 auto 25px;
+}
+
+.title {
+  margin-bottom: 15px;
+
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.text {
+  font-weight: 500;
+  line-height: 1.42857;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+/* ==============  basic  ================ */
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.item {
+  width: calc((100% - 40px) / 3);
+  border-radius: 20px;
+  padding: 45px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ==============  grow row  ============== */
+/* .list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.item {
+  width: calc((100% - 40px) / 3);
+  border-radius: 20px;
+  padding: 45px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.item:last-child {
+  flex-grow: 1;
+} */
+
+/* ==============  grow col  ============== */
+/* .list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+  height: 538px;
+}
+
+.item {
+  width: calc((100% - 40px) / 3);
+  border-radius: 20px;
+  padding: 45px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.item:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+} */
+
+/* ==============  grow first&last  ============== */
+/* .list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.item {
+  flex-grow: 1;
+  width: calc((100% - 40px) / 3);
+  border-radius: 20px;
+  padding: 45px;
+  background: rgba(255, 255, 255, 0.05);
+} */
+
+/* 
+  знаходимо ширину однієї картки (100% - 40px) / 3  
+  для того щоб розрахувати ширину картки яка займає 2 колонки:
+  необхідно помножити ширину однієї картки на 2 та додати відступ 
+  (100% - 40px) / 3 * 2 + 20px
+
+*/
+/* .item:first-child,
+.item:last-child {
+  width: calc((100% - 40px) / 3 * 2 + 20px);
+} */

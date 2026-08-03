@@ -1,0 +1,105 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.sr-only {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  margin: -1px;
+}
+
+.radio-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  text-transform: capitalize;
+  color: #2c2c2e;
+}
+
+/* Кастомний радіо */
+.custom-radio {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+  color: #d1d1d6;
+}
+
+/* Кружечок в середині радіо */
+.custom-radio::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: currentColor;
+  opacity: 0;
+}
+
+/* Кружечок в середині радіо */
+.label:hover .custom-radio {
+  color: #aeaeb2;
+}
+
+/* Аутлайн при фокусі з клавіатури */
+.radio:focus-visible + .label .custom-radio {
+  outline: 1px solid #008cff;
+  outline-offset: 2px;
+  color: #aeaeb2;
+}
+
+/* Стан дізейблу кастомного радіо */
+.radio:disabled + .label .custom-radio {
+  color: rgba(209, 209, 214, 0.5);
+}
+
+/* Стан дізейблу лейблу */
+.radio:disabled + .label {
+  color: rgba(44, 44, 46, 0.5);
+}
+
+/* Стан чекед кастомного радіо */
+.radio:checked + .label .custom-radio {
+  color: #1dc9a0;
+}
+
+/* Стан чекед кружечка в кастомного радіо */
+.radio:checked + .label .custom-radio::before {
+  opacity: 1;
+}
+
+/* Стан чекед ховер для кастомного радіо */
+.radio:checked + .label:hover .custom-radio {
+  color: #1ca080;
+}
+
+/* Стан чекед фокус з клавіатури для кастомного радіо */
+.radio:checked:focus-visible + .label .custom-radio {
+  color: #1ca080;
+}
+
+/* Стан чекед дізейбл для кастомного радіо */
+.radio:checked:disabled + .label .custom-radio {
+  color: rgba(29, 201, 160, 0.5);
+}
